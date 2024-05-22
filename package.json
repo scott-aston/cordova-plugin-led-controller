@@ -1,0 +1,26 @@
+{
+	"name": "led-controller",
+	"version": "1.0.1",
+	"description": "Cordova plug-in to control the wrap-around LED light on a custom Android device.",
+	"cordova": {
+		"id": "darkplexus.cordovaplugin.ledcontroller",
+		"platforms": [
+			"android"
+		]
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/scott-aston/led-controller.git"
+	},
+	"keywords": [
+		"ecosystem:cordova",
+		"cordova",
+		"cordova-android"
+	],
+	"author": "Scott Aston <darkplexus@gmail.com>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/scott-aston/led-controller/issues"
+	},
+	"homepage": "https://github.com/scott-aston/led-controller"
+}

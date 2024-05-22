@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin
+	xmlns="http://apache.org/cordova/ns/plugins/1.0"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	id="led-controller"
+	version="1.0.0"
+>
+	<name>LED-Controller</name>
+	<description>Cordova plug-in to control the wrap-around LED light on a custom Android device.</description>
+	<license>MIT</license>
+	<keywords>led, android</keywords>
+	<repo>https://github.com/scott-aston/led-controller.git</repo>
+	<issue>https://github.com/scott-aston/led-controller/issues</issue>
+
+	<platform name="android">
+		<js-module src="www/led-controller.js" name="LEDController">
+			<!-- the name of the module (object) will be accessible on the JavaScript window object. window.LEDController.functionName() -->
+			<clobbers target="LEDController" />
+		</js-module>
+
+		<config-file target="res/xml/config.xml" parent="/*">
+			<feature name="LEDController">
+				<param name="android-package" value="darkplexus.cordovaplugin.ledcontroller.LEDController"/>
+			</feature>
+		</config-file>
+
+		<source-file
+			src="src/android/src/darkplexus/cordovaplugin/ledcontroller/LEDController.java"
+			target-dir="src/darkplexus/cordovaplugin/ledcontroller"
+		/>
+
+		<config-file target="AndroidManifest.xml" parent="/manifest">
+			<!--
+				* this requires write permission, to a system folder. basically needing the use of "su" or to run as root.
+				* there is no android permission for this, because `<uses-permission android:name="give-me-root-plzkthx">` doesn't exist for such things.
+			-->
+		</config-file>
+	</platform>
+</plugin>

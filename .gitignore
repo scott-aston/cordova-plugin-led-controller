@@ -1,0 +1,13 @@
+.idea
+*.iml
+
+.DS_Store
+
+# can't ignore a folder, because the (unignore) won't be processed.
+# instead, you have to ignore the folder's contents, keeping the folder...
+!src/android
+src/android/*
+!src/android/src/
+src/android/src/*
+!src/android/src/darkplexus/
+
