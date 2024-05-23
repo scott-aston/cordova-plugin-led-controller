@@ -3,7 +3,7 @@
 	xmlns="http://apache.org/cordova/ns/plugins/1.0"
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	id="led-controller"
-	version="1.0.0"
+	version="1.0.2"
 >
 	<name>LED-Controller</name>
 	<description>Cordova plug-in to control the wrap-around LED light on a custom Android device.</description>

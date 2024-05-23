@@ -35,32 +35,32 @@ public class LEDController extends CordovaPlugin {
 
 
 	static {
-		COLOR_MAP = new HashMap<>(); // TODO: create better names, group up the colors names by color channel, then organize them by color shade from dark to light.
+		COLOR_MAP = new HashMap<>();
 		// 0x00 was the "brighter" button, which seems to have no effect.
 		// 0x01 was the "darker", which seems to have no effect.
 		// 0x02 was the "off" button, which did turn off the LED bar.
 		// 0x03 was the "on" button, which did not not restore any color at all or have any effect.
-		COLOR_MAP.put( "off", "0x02" );
-		COLOR_MAP.put( "red", "0x04" );
-		COLOR_MAP.put( "green", "0x05" );
-		COLOR_MAP.put( "blue", "0x06" );
-		COLOR_MAP.put( "white", "0x07" );
-		COLOR_MAP.put( "orange", "0x08" );
-		COLOR_MAP.put( "aquamarine", "0x09" );
-		COLOR_MAP.put( "purple", "0x0A" );
-		COLOR_MAP.put( "cycle_fast", "0x0B" );
-		COLOR_MAP.put( "gold", "0x0C" );
-		COLOR_MAP.put( "turquoise", "0x0D" );
-		COLOR_MAP.put( "neon_purple", "0x0E" );
-		COLOR_MAP.put( "white_pulse", "0x0F" );
-		COLOR_MAP.put( "yellow", "0x10" );
-		COLOR_MAP.put( "neon_blue", "0x11" );
-		COLOR_MAP.put( "violet", "0x12" );
-		COLOR_MAP.put( "cycle_fade", "0x13" );
-		COLOR_MAP.put( "lemon", "0x14" );
-		COLOR_MAP.put( "arctic_blue", "0x15" );
-		COLOR_MAP.put( "magenta", "0x16" );
-		COLOR_MAP.put( "cycle_rgb", "0x17" );
+		COLOR_MAP.put( "off", "0x02" ); // not #000000
+		COLOR_MAP.put( "red", "0x04" ); // #FF0000
+		COLOR_MAP.put( "lime", "0x05" ); // #00FF00
+		COLOR_MAP.put( "blue", "0x06" ); // 0000FF
+		COLOR_MAP.put( "white", "0x07" ); // #FFFFFF
+		COLOR_MAP.put( "dark_orange", "0x08" ); // #FF8000
+		COLOR_MAP.put( "aquamarine", "0x09" ); // #40FFC0
+		COLOR_MAP.put( "light_steel_blue", "0x0A" ); // C0C0FF
+		COLOR_MAP.put( "cycle_fast", "0x0B" ); // fast solid color, repeats: [red, orange, yellow, lime, aqua, blue, fuchsia]
+		COLOR_MAP.put( "orange", "0x0C" ); // #FF8000
+		COLOR_MAP.put( "turquoise", "0x0D" ); // #40FFD8
+		COLOR_MAP.put( "pink", "0x0E" ); // #FFC0FF
+		COLOR_MAP.put( "white_pulse", "0x0F" ); // very slow fade in/out, white.
+		COLOR_MAP.put( "dark_yellow", "0x10" ); // #E0E000
+		COLOR_MAP.put( "aqua", "0x11" ); // #00FFFF
+		COLOR_MAP.put( "cotton_candy", "0x12" ); // #FFD0FF
+		COLOR_MAP.put( "cycle_fade", "0x13" ); // slow fade in/out, repeats: [red, orange, yellow, lime, aqua, blue, fuchsia]
+		COLOR_MAP.put( "yellow", "0x14" ); // FFFF00
+		COLOR_MAP.put( "sky_blue", "0x15" ); // #00D8FF
+		COLOR_MAP.put( "fuchsia", "0x16" ); // #FF20FF
+		COLOR_MAP.put( "cycle_rgb", "0x17" ); // fast solid color, repeats: [red, lime, blue]
 		// 0x18 through 0xFF seem to have no effect.
 	}
 
